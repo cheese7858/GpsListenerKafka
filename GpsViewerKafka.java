@@ -31,18 +31,18 @@ public class GpsViewerKafka {
         props.put("heartbeat.interval.ms", 2000);
         //initiate consumer
         KafkaConsumer<String,String> consumer = new KafkaConsumer<>(props);
-        //subscribe topic
-        System.out.println("Please submit Tracker Number：");
+        //subscribe to topic
+        System.out.println("Please submit the Tracker Number：");
         Scanner scanner = new Scanner(System.in);
-        String id = scanner.nextLine();
-        consumer.subscribe(Arrays.asList("SimpleTracker"+id));
-        System.out.println("Start Tracker"+id);
+        String name = scanner.nextLine();
+        consumer.subscribe(Arrays.asList(name));
+        System.out.println("Start subscribe"+name);
 
-        //read records from server 
+        //read records from server
         while (true){
-            ConsumerRecords<String,String> records = consumer.poll(Duration.ofMillis(500));
+            ConsumerRecords<String,String> records = consumer.poll(Duration.ofMillis(1000));
             for(ConsumerRecord<String,String> record : records){
-                System.out.println("Tracker"+id+"'s output:  " + record.value());
+                System.out.println(name+"'s output:  " + record.value());
             }
         }
     }
