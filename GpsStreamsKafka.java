@@ -17,7 +17,6 @@ import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.Produced;
 import org.apache.kafka.streams.processor.TopicNameExtractor;
 import org.apache.kafka.streams.processor.internals.StaticTopicNameExtractor;
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import org.apache.kafka.common.TopicCollection;
 import org.apache.kafka.streams.processor.internals.InternalTopologyBuilder;
 
