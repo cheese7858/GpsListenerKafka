@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class GpsKafka_Test {
 
-    @Before
+    @Test
     public void test1(){
         //properties
         Properties props = new Properties();
@@ -46,7 +46,7 @@ public class GpsKafka_Test {
         }
     }
 
-    @Test
+    @Before
     public void test2(){
         GpsService service = new GpsService();
         service.run();
