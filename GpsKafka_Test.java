@@ -11,7 +11,7 @@ import java.util.Properties;
 import java.util.Scanner;
 
 
-public class GpsKafka_test {
+public class GpsKafka_Test {
 
     @Before
     public void test1(){
